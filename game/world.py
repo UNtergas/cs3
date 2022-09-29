@@ -62,14 +62,14 @@ class World:
 # --------
 #   random tile/ map is randomized
 # ----
-        if r <= 8:
-            tile = {"name": "tree1", "offset": 14}
-        elif r > 10 and r <= 13:
-            tile = {"name": "tree2", "offset": 19}
+        if r <= 9:
+            tile = {"name": "tree1", "offset": 28}
+        elif r > 10 and r <= 15:
+            tile = {"name": "tree2", "offset": 38}
         elif r > 15 and r <= 18:
-            tile = {"name": "rock1", "offset": 18}
-        elif r > 20 and r <= 22:
-            tile = {"name": "rock2", "offset": 5}
+            tile = {"name": "rock1", "offset": 36}
+        elif r > 20 and r <= 23:
+            tile = {"name": "rock2", "offset": 10}
         else:
             tile = {"name": "", "offset": 0}
 
@@ -88,13 +88,27 @@ class World:
         iso_y = (x + y)/2
         return iso_x, iso_y
 
+    #           OUT-DATED: small tiles
+    # def load_images(self):
+
+    #     land = pg.image.load("cs3/asset_graphis/Land1a_00078.png")
+    #     tree1 = pg.image.load("cs3/asset_graphis/Land1a_00016.png")
+    #     tree2 = pg.image.load("cs3/asset_graphis/Land1a_00045.png")
+    #     rock1 = pg.image.load("cs3/asset_graphis/plateau_00001.png")
+    #     rock2 = pg.image.load("cs3/asset_graphis/plateau_00005.png")
+    #     #land2 = pg.image.load("cs3/asset_graphis/Land1a_00003.png")
+
+    #     return {"land": land, "tree1": tree1, "tree2": tree2, "rock1": rock1, "rock2": rock2}
+
+    #       2x upscale of shits
+
     def load_images(self):
 
-        land = pg.image.load("cs3/asset_graphis/Land1a_00078.png")
-        tree1 = pg.image.load("cs3/asset_graphis/Land1a_00016.png")
-        tree2 = pg.image.load("cs3/asset_graphis/Land1a_00045.png")
-        rock1 = pg.image.load("cs3/asset_graphis/plateau_00001.png")
-        rock2 = pg.image.load("cs3/asset_graphis/plateau_00005.png")
+        land = pg.image.load("cs3/asset_graphis/Land1a_00078_2X.png")
+        tree1 = pg.image.load("cs3/asset_graphis/Land1a_00016_2X.png")
+        tree2 = pg.image.load("cs3/asset_graphis/Land1a_00045_2X.png")
+        rock1 = pg.image.load("cs3/asset_graphis/plateau_00001_2X.png")
+        rock2 = pg.image.load("cs3/asset_graphis/plateau_00005_2X.png")
         #land2 = pg.image.load("cs3/asset_graphis/Land1a_00003.png")
 
         return {"land": land, "tree1": tree1, "tree2": tree2, "rock1": rock1, "rock2": rock2}

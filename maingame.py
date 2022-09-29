@@ -1,7 +1,7 @@
 import pygame as pg
 from game.game import Game
 
-SCREENSIZE = WIDTH, HEIGHT = 1200, 780
+SCREENSIZE = WIDTH, HEIGHT = 1200, 800
 
 
 def main():
